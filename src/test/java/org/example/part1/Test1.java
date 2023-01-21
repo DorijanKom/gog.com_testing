@@ -50,7 +50,7 @@ public class Test1 {
         webDriver.findElement(By.xpath("/html/body/div[2]/div/div[4]/div/div[3]/div[2]/div/div[13]/a")).click();
 
         Thread.sleep(4000);
-        WebElement title = webDriver.findElement(By.xpath("/html/body/div[2]/div[6]/div[1]/h1"));
+        WebElement title = webDriver.findElement(By.xpath("/html/body/div[1]/div[6]/div[1]/h1"));
         String gameTitle = title.getText();
 
         assertEquals("Mafia Trilogy", gameTitle);
@@ -132,5 +132,36 @@ public class Test1 {
 
         assertEquals("3", cart);
         Thread.sleep(10000);
+    }
+
+    @Test
+    void testGenreTag() throws InterruptedException {
+        webDriver.get(baseUrl);
+
+        webDriver.findElement(By.xpath("/html/body/nav/div[1]/div[1]/div[1]/a")).click();
+
+        webDriver.findElement(By.xpath("//*[@id=\"genres-shooter\"]")).click();
+        Thread.sleep(3000);
+        webDriver.findElement(By.xpath("/html/body/div/app-root/div/div/app-catalog/catalog-content/div/div[2]/paginated-products-grid/div/product-tile[1]/a")).click();
+        webDriver.findElement(By.xpath("/html/body/div[1]/button")).click();
+
+        WebElement tags = webDriver.findElement(By.xpath("/html/body/div[2]/div[7]/div[4]/div[3]/div[2]/div[1]/div[2]"));
+
+        String gameTags = tags.getText();
+        Thread.sleep(3000);
+
+        assertTrue(gameTags.contains("Shooter"));
+    }
+
+    @Test
+    void testGamePrice() {
+        webDriver.get(baseUrl);
+
+        webDriver.findElement(By.xpath("/html/body/nav/div[1]/div[1]/div[1]/a")).click();
+
+        webDriver.findElement(By.xpath("/html/body/div/app-root/div/div/app-catalog/catalog-content/div/div[2]/paginated-products-grid/div/product-tile[1]/a")).click();
+
+        WebElement price = webDriver.findElement(By.xpath("/html/body/div[1]/div[6]/div[2]/div/div[1]/span[3]"));
+        assertNotNull(price);
     }
 }
