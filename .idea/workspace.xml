@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b59440f1-5dd3-4b0a-8fe9-ed5697cb53d2" name="Changes" comment="4 tests done">
+    <list default="true" id="b59440f1-5dd3-4b0a-8fe9-ed5697cb53d2" name="Changes" comment="tests for tag and price done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/part1/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/part1/Test1.java" afterDir="false" />
     </list>
@@ -45,8 +45,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.Test1.testGamePrice">
-    <configuration name="Test1.TestGamesCountInCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.Test1.testPriceInCart">
+    <configuration name="Test1.testForum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gog.com_testing" />
       <extension name="coverage">
         <pattern>
@@ -56,7 +56,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example.part1" />
       <option name="MAIN_CLASS_NAME" value="org.example.part1.Test1" />
-      <option name="METHOD_NAME" value="TestGamesCountInCart" />
+      <option name="METHOD_NAME" value="testForum" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,7 +110,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test1.testVideoPlayer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Test1.testPriceInCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gog.com_testing" />
       <extension name="coverage">
         <pattern>
@@ -120,7 +120,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example.part1" />
       <option name="MAIN_CLASS_NAME" value="org.example.part1.Test1" />
-      <option name="METHOD_NAME" value="testVideoPlayer" />
+      <option name="METHOD_NAME" value="testPriceInCart" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Test1.testPriceInCart" />
+        <item itemvalue="JUnit.Test1.testForum" />
         <item itemvalue="JUnit.Test1.testGamePrice" />
         <item itemvalue="JUnit.Test1.testGenreTag" />
         <item itemvalue="JUnit.Test1.testHighlights" />
-        <item itemvalue="JUnit.Test1.TestGamesCountInCart" />
-        <item itemvalue="JUnit.Test1.testVideoPlayer" />
       </list>
     </recent_temporary>
   </component>
@@ -152,11 +152,19 @@
       <option name="project" value="LOCAL" />
       <updated>1674336866329</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="tests for tag and price done">
+      <created>1674342366518</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674342366518</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="4 tests done" />
-    <option name="LAST_COMMIT_MESSAGE" value="4 tests done" />
+    <MESSAGE value="tests for tag and price done" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests for tag and price done" />
   </component>
 </project>

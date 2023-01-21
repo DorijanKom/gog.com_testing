@@ -164,4 +164,38 @@ public class Test1 {
         WebElement price = webDriver.findElement(By.xpath("/html/body/div[1]/div[6]/div[2]/div/div[1]/span[3]"));
         assertNotNull(price);
     }
+
+    @Test
+    void testForum() {
+        webDriver.get(baseUrl);
+
+        webDriver.findElement(By.xpath("/html/body/nav/div[1]/div[1]/div[4]/a")).click();
+        webDriver.findElement(By.xpath("/html/body/div[3]/div/div[2]/div[2]/div[1]/div[4]/div/div/div[1]/div[1]/a")).click();
+        webDriver.findElement(By.xpath("/html/body/div[3]/div/div[4]/div[2]/div[2]/div[1]/div[3]/a[1]")).click();
+
+        assertEquals("https://www.gog.com/forum/general/spambot_report_thread", webDriver.getCurrentUrl());
+
+    }
+
+    @Test
+    void testPriceInCart() throws InterruptedException {
+        webDriver.get(baseUrl);
+
+        webDriver.findElement(By.xpath("/html/body/nav/div[1]/div[2]/div[4]/a")).click();
+        webDriver.findElement(By.xpath("/html/body/nav/div[1]/div[2]/div[4]/div/div[1]/div/input")).sendKeys("Heroes of Might and Magic 3");
+        Thread.sleep(2000);
+        webDriver.findElement(By.xpath("/html/body/nav/div[1]/div[2]/div[4]/div/div[3]/div/div/div[1]/div/div/a/div/div/div[1]/span")).click();
+        webDriver.findElement(By.xpath("/html/body/div[1]/div[6]/div[2]/div/div[2]/button[1]")).click();
+        Thread.sleep(2000);
+        webDriver.findElement(By.xpath("/html/body/div[1]/nav/div[1]/div[2]/div[4]/a")).click();
+        webDriver.findElement(By.xpath("/html/body/div[1]/nav/div[1]/div[2]/div[4]/div/div[1]/div/input")).sendKeys("spong");
+        Thread.sleep(2000);
+        webDriver.findElement(By.xpath("/html/body/div[1]/nav/div[1]/div[2]/div[4]/div/div[3]/div/div/div[1]/div/div[2]/a/div/div/div[2]")).click();
+        webDriver.findElement(By.xpath("/html/body/div[1]/div[6]/div[2]/div/div[2]/button[1]/span/span[2]")).click();
+
+        webDriver.findElement(By.xpath("/html/body/div[1]/nav/div[1]/div[2]/div[3]/a")).click();
+        Thread.sleep(5000);
+        WebElement price = webDriver.findElement(By.xpath("/html/body/div[1]/nav/div[1]/div[2]/div[3]/div/div[1]/div[2]"));
+        assertEquals("9.98", price.getText());
+    }
 }
