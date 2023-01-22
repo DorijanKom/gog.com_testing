@@ -1,8 +1,12 @@
 package org.example.part2;
 
 import org.junit.jupiter.api.AfterAll;
+
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -13,10 +17,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import org.junit.jupiter.api.TestMethodOrder;
 import static org.junit.jupiter.api.Assertions.*;
-
 import java.time.Duration;
+
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TestPart2 {
 	
 	private static WebDriver webDriver;
@@ -40,7 +45,9 @@ public class TestPart2 {
 		webDriver.quit();
 	}
 	
+	
 	@Test
+	@Order(1)
 	void testLanguage() throws InterruptedException {
 		
 		webDriver.get(baseUrl);
@@ -55,6 +62,7 @@ public class TestPart2 {
 	}
 	
 	@Test
+	@Order(2)
 	void testDownload() throws InterruptedException {
 		
 		webDriver.get(baseUrl);
@@ -65,6 +73,7 @@ public class TestPart2 {
 	}
 	
 	@Test
+	@Order(3)
 	void testGamePrice() throws InterruptedException {
 		
 		webDriver.get(baseUrl);
@@ -91,6 +100,7 @@ public class TestPart2 {
 	}
 	
 	@Test
+	@Order(4)
 	void testTwitchStream() throws InterruptedException {
 		
 		webDriver.get(baseUrl);
@@ -126,6 +136,7 @@ public class TestPart2 {
 	}
 	
 	@Test
+	@Order(5)
 	void testModifyPrice() throws InterruptedException {
 		
 		webDriver.get(baseUrl);
@@ -153,6 +164,7 @@ public class TestPart2 {
 	}
 	
 	@Test
+	@Order(6)
 	void testLinux() throws InterruptedException {
 		
 		webDriver.get(baseUrl);
@@ -180,6 +192,7 @@ public class TestPart2 {
 }
 	
 	@Test
+	@Order(7)
 	void testCart() throws InterruptedException {
 		
 		webDriver.get(baseUrl);
